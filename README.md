@@ -1,24 +1,29 @@
-# README
+## Development Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Dependencies  
+- Docker & Docker compose
 
-Things you may want to cover:
+#### Enviroment Variables(.env file)
+```bash
+RAILS_ENV=development
 
-* Ruby version
+DATABASE_HOST=db
+DATABASE_NAME=quotes
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=root
 
-* System dependencies
+REDIS_URL=redis://redis:6379/1
+```
 
-* Configuration
+#### Run the first time only
+```bash
+docker compose build
+docker compose run app bundle install
+docker compose run app rake db:drop db:create db:migrate db:seed # OR rails db:reset
+docker compose up
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### The rest of the time just only need run
+```bash
+  docker compose up #🪄🐋
+```
