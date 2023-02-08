@@ -1,10 +1,10 @@
-<%= form_with model:quote, html: { class: "quote form" } do |f| %>
+<%= form_with model:quote do |f| %>
   <% if quote.errors.any? %>
-    <div class="error-message">
+    <div>
       <%= quote.errors.full_messages.to_sentence.capitalize %>
     </div>
   <% end %>
   <%= f.text_field :name, input_html: { autofocus: true, placeholder: :name } %>
-  <%= link_to "Cancel", quotes_path, class: "btn btn--light" %>
-  <%= f.submit class: "btn btn--secondary" %>
+  <%= link_to "Cancel", quotes_path %>
+  <%= f.submit %>
 <% end %>

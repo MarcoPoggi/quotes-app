@@ -1,4 +1,8 @@
 class Quote < ApplicationRecord
+  # --- relations ---
+  belongs_to :company
+
+  # --- validations ---
   validates :name, presence: true
 
   # --- scopes ---
@@ -25,5 +29,5 @@ class Quote < ApplicationRecord
 
   #OPTION 3
 
-  broadcasts_to ->(quote) { "quotes" }, inserts_by: :prepend
+  broadcasts_to ->(quote) { [quote.company, "quotes"] }, inserts_by: :prepend
 end

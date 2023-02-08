@@ -1,6 +1,6 @@
-<main class="container">
+<main>
   <%= link_to sanitize("&larr; Back to quotes"), quotes_path %>
-  <div class="header">
+  <div>
     <h1>New quote</h1>
   </div>
   <%= turbo_frame_tag dom_id(@quote) do %>

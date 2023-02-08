@@ -1,0 +1,9 @@
+<main>
+  <h1>Quote editor</h1>
+  <p>A blazing fast quote editor built with Hotwire</p>
+  <% if user_signed_in? %>
+    <%= link_to "View quotes", quotes_path %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path %>
+  <% end %>
+</main>
