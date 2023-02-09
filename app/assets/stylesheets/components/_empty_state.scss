@@ -1,0 +1,18 @@
+.empty-state {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 360px;
+  padding: 12px;
+  border: 2px groove black;
+
+  &--only-child{
+    display: none;
+
+    &:only-child{
+      display: flex;
+      background-color: red;
+    }
+  }
+}

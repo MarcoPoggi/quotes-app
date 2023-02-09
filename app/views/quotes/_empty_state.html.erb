@@ -1,0 +1,7 @@
+<div class="empty-state empty-state--only-child">
+  <h3> You don't have any quotes </h3>
+  
+  <%= link_to "Add quote",  new_quote_path, data: {
+    turbo_frame: dom_id(Quote.new)
+  } %>
+</div>
