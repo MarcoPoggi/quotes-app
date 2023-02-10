@@ -1,4 +1,4 @@
-<header>
+<header class="navbar_container">
   <% if user_signed_in? %>
     <div>
       <%= current_company.name %>
@@ -8,9 +8,11 @@
     </div>
     <%= button_to "Sign out",
                   destroy_user_session_path,
-                  method: :delete %>
+                  method: :delete,
+                  class: "navbar_container--button-link" %>
   <% else %>
     <%= link_to "Sign in",
-                new_user_session_path %>
+                new_user_session_path,
+                class: "navbar_container--button-link" %>
   <% end %>
 </header>

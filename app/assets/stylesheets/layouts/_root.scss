@@ -1,0 +1,17 @@
+#root {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+
+  & > .navbar_container{
+    min-height: 10vh;
+  }
+
+  & > .main_content{
+    min-height: 85vh;
+  }
+
+  & > .footer_container{
+    min-height: 5vh;
+  }
+}

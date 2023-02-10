@@ -9,12 +9,17 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render "layouts/navbar" %>
-    <div id="flash" class="flash">
-      <%= render "layouts/flash" %>    
+    <div id="root">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= render "layouts/navbar" %>
+      <div id="flash" class="flash">
+        <%= render "layouts/flash" %>
+      </div>
+      <div class="main_content">
+        <%= yield %>
+      </div>
+      <%= render "layouts/footer" %>
     </div>
-    <%= yield %>
   </body>
 </html>

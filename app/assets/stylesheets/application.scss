@@ -15,7 +15,13 @@
  */
 
 //  global config
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700&display=swap');
+
 @import "config/reset";
 
 //  components
 @import "components/empty_state";
+@import "components/navbar";
+
+//  layouts & pages
+@import "layouts/home";

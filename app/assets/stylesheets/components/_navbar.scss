@@ -1,0 +1,13 @@
+.navbar_container{
+  background-color: rgb(226, 42, 5);
+  padding: .5em 2em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+
+  &--button-link{
+    color: #FFF;
+    font-weight: bold;
+  }
+}
