@@ -1,15 +1,18 @@
 <header class="navbar_container">
   <% if user_signed_in? %>
-    <div>
-      <%= current_company.name %>
+    <div class="navbar_container--brand">
+      <img src="https://www.freeiconspng.com/uploads/pepsi-logo-png-transparent-31.png" alt="<%=current_company.name%> brand">
+      <%= link_to current_company.name, root_path %>
     </div>
-    <div>
-      <%= current_user.name %>
-    </div>
-    <%= button_to "Sign out",
+    <div class="navbar_container--right_bar">
+      <div class="navbar_container--username">
+        <span><%= current_user.name %></span>
+      </div>
+      <%= button_to "Sign out",
                   destroy_user_session_path,
                   method: :delete,
                   class: "navbar_container--button-link" %>
+    </div>
   <% else %>
     <%= link_to "Sign in",
                 new_user_session_path,

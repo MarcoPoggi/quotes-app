@@ -29,5 +29,5 @@ class Quote < ApplicationRecord
 
   #OPTION 3
 
-  broadcasts_to ->(quote) { [quote.company, "quotes"] }, inserts_by: :prepend
+  broadcasts_to ->(quote) { [quote.company, "quotes-container"] }, inserts_by: :prepend
 end

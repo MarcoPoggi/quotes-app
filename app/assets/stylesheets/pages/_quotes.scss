@@ -1,0 +1,89 @@
+.quotes_container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+
+  &--header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    width: 75vw;
+  }
+
+  &--content {
+    min-width: 75vw;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 1em;
+
+    .turbo_tag {
+      width: 100%;
+
+      .quote_badge {
+        box-shadow: 0 0 3px #222;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 6px;
+        align-items: center;
+        padding: 1em;
+
+        &--name {
+          color: #222;
+          font-weight: bold;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &--actions {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1em;
+
+          &_delete_btn {
+            .icon-btn {
+              color: rgb(177, 54, 54);
+            }
+          }
+
+          &_edit_btn {
+            .icon-btn {
+              color: #0ea158
+            }
+          }
+
+          &_delete_btn,
+          &_edit_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            color: #222;
+            border: none;
+
+            .icon-btn {
+              font-size: 2em;
+              transition: all 100ms;
+            }
+
+            &:hover {
+              .icon-btn {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

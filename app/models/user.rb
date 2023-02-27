@@ -4,6 +4,6 @@ class User < ApplicationRecord
   belongs_to :company
 
   def name #decorator?
-    email.split("@").first.capitalize
+    "@#{email.split("@").first.split("+").first.downcase}"
   end
 end

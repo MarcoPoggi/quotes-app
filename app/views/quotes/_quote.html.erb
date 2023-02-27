@@ -1,9 +1,13 @@
-<%= turbo_frame_tag dom_id(quote) do%>
-  <div>
-    <%= link_to quote.name, quote_path(quote), data: { turbo_frame: "_top" } %>
-    <div>
-      <%= button_to "Delete", quote_path(quote), method: :delete %>
-      <%= link_to "Edit", edit_quote_path(quote) %>
+<%= turbo_frame_tag dom_id(quote), class: "turbo_tag" do%>
+  <div class="quote_badge">
+    <%= link_to quote.name, quote_path(quote), data: { turbo_frame: "_top" }, class:"quote_badge--name" %>
+    <div class="quote_badge--actions">
+      <%= button_to quote_path(quote), method: :delete, class:"quote_badge--actions_delete_btn" do %>
+        <span class="material-symbols-outlined icon-btn">delete</span>
+      <%end%>
+      <%= link_to edit_quote_path(quote), class:"quote_badge--actions_edit_btn" do %>
+        <span class="material-symbols-outlined icon-btn">edit_note</span>
+      <% end %>
     </div>
   </div>
 <% end %>

@@ -3,15 +3,15 @@
   flex-flow: column nowrap;
   min-height: 100vh;
 
-  & > .navbar_container{
+  &>.navbar_container {
     min-height: 10vh;
   }
 
-  & > .main_content{
-    min-height: 85vh;
+  &>.main_content {
+    min-height: 90vh;
   }
 
-  & > .footer_container{
-    min-height: 5vh;
+  &>.footer_container {
+    min-height: 10vh;
   }
 }

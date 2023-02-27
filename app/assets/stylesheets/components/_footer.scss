@@ -1,0 +1,24 @@
+.footer_container{
+  background-color: #222;
+  color: #FFF;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: .5em;
+  gap: 1em;
+
+  &--social{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    .social-item-image{
+      width: 36px;
+      height: 100%;
+    }
+  }
+}
