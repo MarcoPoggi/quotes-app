@@ -20,10 +20,12 @@
 @import "config/reset";
 
 //  components
+@import "components/button";
 @import "components/empty_state";
 @import "components/navbar";
 @import "components/footer";
 
 //  layouts & pages
+@import "pages/devise/devise";
 @import "layouts/home";
 @import "pages/quotes";

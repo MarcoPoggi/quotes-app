@@ -1,9 +1,8 @@
 .home_page {
-  margin-top: 20vh;
   padding: 1em 3em;
   gap: 1em;
   width: 100%;
-  height: auto;
+  min-height: inherit;
   display: flex;
   justify-content: center;
   align-items: center;

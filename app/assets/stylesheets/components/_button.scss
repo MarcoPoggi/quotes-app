@@ -1,4 +1,5 @@
 .button-link{
+  border: none;
   padding: .7em;
   border-radius: 6px;
   min-width: 120px;
@@ -6,6 +7,7 @@
   font-weight: bold;
   background-color: #0ea158;
   color: #FFF;
+  cursor: pointer;
 
   &:hover{
     background-color: #0b8b4b;

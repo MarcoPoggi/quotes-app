@@ -2,7 +2,7 @@
   <% if user_signed_in? %>
     <div class="navbar_container--brand">
       <img src="https://www.freeiconspng.com/uploads/pepsi-logo-png-transparent-31.png" alt="<%=current_company.name%> brand">
-      <%= link_to current_company.name, root_path %>
+      <%= link_to current_company.name, root_path, class:"brand-name" %>
     </div>
     <div class="navbar_container--right_bar">
       <div class="navbar_container--username">
