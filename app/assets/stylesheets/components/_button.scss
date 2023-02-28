@@ -1,4 +1,4 @@
-.button-link{
+.button-link {
   border: none;
   padding: .7em;
   border-radius: 6px;
@@ -9,7 +9,20 @@
   color: #FFF;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     background-color: #0b8b4b;
+  }
+}
+
+.button-link-secondary {
+  @extend .button-link;
+  background: none;
+  color: #222;
+  outline: 2px solid #222;
+
+  &:hover {
+    outline: 2px solid #0ea158;
+    color: #0ea158;
+    background: none;
   }
 }

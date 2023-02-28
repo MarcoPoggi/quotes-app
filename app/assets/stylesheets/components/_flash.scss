@@ -1,0 +1,60 @@
+.flash__message {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  border-radius: 6px;
+  width: 320px;
+  top: 85%;
+  color: #222;
+  font-weight: bold;
+  left: 1em;
+  padding: 1em;
+  color: #FFF;
+  animation: roll-in-left 6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+.notice {
+  background-color: #0b8b4b;
+}
+
+.alert {
+  background-color: red;
+}
+
+@keyframes roll-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px) rotate(-720deg);
+    transform: translateX(-1000px) rotate(-720deg);
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    opacity: 0;
+  }
+
+  25% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  50% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  75% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateX(-1000px) rotate(-540deg);
+    transform: translateX(-1000px) rotate(-540deg);
+    opacity: 0;
+  }
+}
